@@ -106,9 +106,9 @@ namespace Osk42 {
 			return lc;
 		}
 
-		public static bool isHit(CharaBase c1, CharaBase c2) {
+		public static bool isHit(CharaBase c1, CharaBase c2, float length) {
 			var v = c1.transform.position - c2.transform.position;
-			var sqrLength = 0.5f * 0.5f;
+			var sqrLength = length * length;
 			if (sqrLength < v.sqrMagnitude) return false;
 			return true;
 		}
@@ -133,7 +133,7 @@ namespace Osk42 {
 						var friend = list2[i2];
 						if (friend.type != CharaType.Friend) continue;
 						var v = c1.transform.position - friend.transform.position;
-						if (!isHit(c1, friend)) continue;
+						if (!isHit(c1, friend, 0.5f)) continue;
 						addSlave(self, self.player.charaBase, friend);
 					}
 				}
@@ -149,7 +149,7 @@ namespace Osk42 {
 						var friend = list2[i2];
 						var v = c1.transform.position - friend.transform.position;
 						if (c1.hp <= 0) continue;
-						if (!isHit(c1, friend)) continue;
+						if (!isHit(c1, friend, 0.5f)) continue;
 						c1.hp = 0;
 						if (c1.type == CharaType.Slave) {
 							removeSlave(self, self.player.charaBase, c1);
@@ -169,7 +169,7 @@ namespace Osk42 {
 						var enemy = list2[i2];
 						var v = ring.transform.position - enemy.transform.position;
 						if (enemy.hp <= 0) continue;
-						if (!isHit(ring, enemy)) continue;
+						if (!isHit(ring, enemy, 0.7f)) continue;
 						enemy.hp = 0;
 						GameObject.Destroy(enemy.gameObject);
 					}

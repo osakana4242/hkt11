@@ -46,7 +46,7 @@ namespace Osk42 {
 							var sqrDistance = (self.targetPosition - position).sqrMagnitude;
 							var rot = self.transform.rotation;
 							var trot = Quaternion.LookRotation(self.targetPosition - position);
-							var nrot = Quaternion.RotateTowards(rot, trot, 360f * Time.deltaTime);
+							var nrot = Quaternion.RotateTowards(rot, trot, 90f * Time.deltaTime);
 							var delta = nrot * Vector3.forward * Time.deltaTime;
 							position += delta;
 							self.transform.position = position;
