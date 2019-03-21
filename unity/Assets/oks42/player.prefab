@@ -77,6 +77,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameInstanceId: 0
+  animName: 
+  type: 1
+  hp: 1
+  hasRun: 0
+  hasWalk: 0
+  hasRot: 0
 --- !u!114 &7806312360290133971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,7 +100,8 @@ MonoBehaviour:
   angleSpeed: 180
   nodeListL: []
   nodeListR: []
-  nodeLength: 1.08
+  nodeLength: 1.25
+  playingAnimName: 
 --- !u!1001 &8506822986607522328
 PrefabInstance:
   m_ObjectHideFlags: 0

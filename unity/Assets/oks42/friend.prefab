@@ -77,6 +77,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameInstanceId: 0
+  animName: 
+  type: 3
+  hasMove: 0
+  hasRot: 0
 --- !u!114 &3323869126944229929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +94,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charaBase: {fileID: 7631860198153099792}
-  speed: 5
+  walkSpeed: 5
+  angleSpeed: 360
+  farDistance: 0.1
 --- !u!1001 &3747657172541573694
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81dfc84389f1a854dadf3c4805bfa57b, type: 3}
   m_Name: asset_data
   m_EditorClassIdentifier: 
+  config:
+    cameraSpeed: 5
   assets:
   - {fileID: 4928579419180523867, guid: 91b56452dcd02ce46a1eb80a92e7ea79, type: 3}
   - {fileID: 4106103822775283157, guid: 91f8f8c5600bbaf4590382892e4ebaa8, type: 3}
+  - {fileID: 4106103822775283157, guid: f07317beb2679c047a8f623973c744ce, type: 3}
+  - {fileID: 4106103822775283157, guid: 202b658d41dd4764aa29ae653124200f, type: 3}
